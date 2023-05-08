@@ -1,10 +1,10 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Project Pythia Cookbook Template
-author: the <a href="https://projectpythia.org/">Project Pythia</a> Community
+title: Quick CMIP demo Cookbook
+author: Brian Rose
 logo: notebooks/images/logos/pythia_logo-white-rtext.svg
-email: projectpythia@ucar.edu
+email: brose@albany.edu
 copyright: "2022"
 
 description: A sample cookbook description.
