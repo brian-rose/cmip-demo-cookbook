@@ -5,6 +5,13 @@ dependencies:
   - jupyter-book
   - jupyterlab
   - jupyter_server<2
+  - matplotlib
+  - xarray
+  - pandas
+  - intake-esm
+  - fsspec
+  - gcsfs
+  - nc-time-axis
   - pip
   - pip:
       - sphinx-pythia-theme
