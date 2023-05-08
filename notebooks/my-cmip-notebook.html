@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Pythia Notebook Template &#8212; Project Pythia Cookbook Template</title>
+    <title>Google Cloud CMIP6 Public Data: Basic Python Example &#8212; Project Pythia Cookbook Template</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,12 +51,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="(Replace_with_your_title) Cookbook" href="../README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -192,9 +189,9 @@ const thebe_selector_output = ".output, .cell_output"
   Introduction
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebook-template.html">
    Project Pythia Notebook Template
   </a>
  </li>
@@ -236,7 +233,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/notebook-template.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebooks/my-cmip-notebook.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -256,10 +253,10 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/cookbook-template//issues/new?title=Issue%20on%20page%20%2Fnotebooks/notebook-template.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/cookbook-template//issues/new?title=Issue%20on%20page%20%2Fnotebooks/my-cmip-notebook.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/notebook-template.ipynb"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/my-cmip-notebook.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -279,7 +276,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="http://binder.mypythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/notebook-template.ipynb"><button type="button"
+        <a class="binder-button" href="http://binder.mypythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/my-cmip-notebook.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -317,71 +314,19 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#your-first-content-section">
-   Your first content section
+  <a class="reference internal nav-link" href="#browse-catalog">
+   Browse Catalog
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-content-subsection">
-     A content subsection
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#another-content-subsection">
-     Another content subsection
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#your-second-content-section">
-   Your second content section
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#subsection-to-the-second-section">
-     Subsection to the second section
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#a-quick-demonstration">
-       a quick demonstration
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#of-further-and-further">
-         of further and further
-        </a>
-        <ul class="nav section-nav flex-column">
-         <li class="toc-h6 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#header-levels">
-           header levels
-          </a>
-         </li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#last-section">
-   Last Section
+  <a class="reference internal nav-link" href="#load-data">
+   Load Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#whats-next">
-     What’s next?
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resources-and-references">
@@ -399,32 +344,17 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
               
               <div>
                 
-  <p>Let’s start here! If you can directly link to an image relevant to your notebook, such as <a class="reference external" href="https://github.com/numpy/numpy/blob/main/doc/source/_static/numpylogo.svg">canonical logos</a>, do so here at the top of your notebook. You can do this with Markdown syntax,</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">![&lt;image</span> <span class="pre">title&gt;](http://link.com/to/image.png</span> <span class="pre">&quot;image</span> <span class="pre">alt</span> <span class="pre">text&quot;)</span></code></p>
-</div></blockquote>
-<p>or edit this cell to see raw HTML <code class="docutils literal notranslate"><span class="pre">img</span></code> demonstration. This is preferred if you need to shrink your embedded image. <strong>Either way be sure to include <code class="docutils literal notranslate"><span class="pre">alt</span></code> text for any embedded images to make your content more accessible.</strong></p>
-<p><a class="reference internal" href="../_images/ProjectPythia_Logo_Final-01-Blue.svg"><img alt="Project Pythia Logo" src="../_images/ProjectPythia_Logo_Final-01-Blue.svg" width="250" /></a></img></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="project-pythia-notebook-template">
-<h1>Project Pythia Notebook Template<a class="headerlink" href="#project-pythia-notebook-template" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<p>Next, title your notebook appropriately with a top-level Markdown header, <code class="docutils literal notranslate"><span class="pre">#</span></code>. Do not use this level header anywhere else in the notebook. Our book build process will use this title in the navbar, table of contents, etc. Keep it short, keep it descriptive. Follow this with a <code class="docutils literal notranslate"><span class="pre">---</span></code> cell to visually distinguish the transition to the prerequisites section.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="google-cloud-cmip6-public-data-basic-python-example">
+<h1>Google Cloud CMIP6 Public Data: Basic Python Example<a class="headerlink" href="#google-cloud-cmip6-public-data-basic-python-example" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<p>This is actually borrowed from the <a class="reference external" href="https://projectpythia.org/cmip6-cookbook">CMIP6 Cookbook</a> maintained by <a class="reference external" href="https://projectpythia.org">Project Pythia</a>.</p>
+<p>The notebook was adapted from an earlier example in the <a class="reference external" href="http://gallery.pangeo.io/repos/pangeo-gallery/cmip6/basic_search_and_load.html">Pangeo gallery</a>.</p>
 <hr class="docutils" />
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>If you have an introductory paragraph, lead with it here! Keep it short and tied to your material, then be sure to continue into the required list of topics below,</p>
-<ol class="arabic simple">
-<li><p>This is a numbered list of the specific topics</p></li>
-<li><p>These should map approximately to your main sections of content</p></li>
-<li><p>Or each second-level, <code class="docutils literal notranslate"><span class="pre">##</span></code>, header in your notebook</p></li>
-<li><p>Keep the size and scope of your notebook in check</p></li>
-<li><p>And be sure to let the reader know up front the important concepts they’ll be leaving with</p></li>
-</ol>
+<p>This notebooks shows how to query the Google Cloud CMIP6 catalog and load the data using Python.</p>
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>This section was inspired by <a class="reference external" href="https://github.com/alan-turing-institute/the-turing-way/blob/master/book/templates/chapter-template/chapter-landing-page.md">this template</a> of the wonderful <a class="reference external" href="https://the-turing-way.netlify.app">The Turing Way</a> Jupyter Book.</p>
-<p>Following your overview, tell your reader what concepts, packages, or other background information they’ll <strong>need</strong> before learning your material. Tie this explicitly with links to other pages here in Foundations or to relevant external resources. Remove this body text, then populate the Markdown table, denoted in this cell with <code class="docutils literal notranslate"><span class="pre">|</span></code> vertical brackets, below, and fill out the information following. In this table, lay out prerequisite concepts by explicitly linking to other Foundations material or external resources, or describe generally helpful concepts.</p>
-<p>Label the importance of each concept explicitly as <strong>helpful/necessary</strong>.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Concepts</p></th>
@@ -433,7 +363,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://foundations.projectpythia.org/core/cartopy/cartopy.html">Intro to Cartopy</a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://foundations.projectpythia.org/core/xarray/xarray-intro.html">Intro to Xarray</a></p></td>
 <td><p>Necessary</p></td>
 <td><p></p></td>
 </tr>
@@ -441,134 +371,162 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <td><p>Helpful</p></td>
 <td><p>Familiarity with metadata structure</p></td>
 </tr>
-<tr class="row-even"><td><p>Project management</p></td>
-<td><p>Helpful</p></td>
-<td><p></p></td>
-</tr>
 </tbody>
 </table>
 <ul class="simple">
-<li><p><strong>Time to learn</strong>: estimate in minutes. For a rough idea, use 5 mins per subsection, 10 if longer; add these up for a total. Safer to round up and overestimate.</p></li>
-<li><p><strong>System requirements</strong>:</p>
-<ul>
-<li><p>Populate with any system, version, or non-Python software requirements if necessary</p></li>
-<li><p>Otherwise use the concepts table above and the Imports section below to describe required packages as necessary</p></li>
-<li><p>If no extra requirements, remove the <strong>System requirements</strong> point altogether</p></li>
-</ul>
-</li>
+<li><p><strong>Time to learn</strong>: 10 minutes</p></li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="imports">
 <h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Begin your body of content with another <code class="docutils literal notranslate"><span class="pre">---</span></code> divider before continuing into this section, then remove this body text and populate the following code cell with all necessary Python imports <strong>up-front</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="your-first-content-section">
-<h2>Your first content section<a class="headerlink" href="#your-first-content-section" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>This is where you begin your first section of material, loosely tied to your objectives stated up front. Tie together your notebook as a narrative, with interspersed Markdown text, images, and more as necessary,</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># as well as any and all of your code cells</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">zarr</span>
+<span class="kn">import</span> <span class="nn">fsspec</span>
+
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">6</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world!
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="a-content-subsection">
-<h3>A content subsection<a class="headerlink" href="#a-content-subsection" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Divide and conquer your objectives with Markdown subsections, which will populate the helpful navbar in Jupyter Lab and here on the Jupyter Book!</p>
+</div>
+<div class="section" id="browse-catalog">
+<h2>Browse Catalog<a class="headerlink" href="#browse-catalog" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>The data catatalog is stored as a CSV file. Here we read it with Pandas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># some subsection code</span>
-<span class="n">new</span> <span class="o">=</span> <span class="s2">&quot;helpful information&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://storage.googleapis.com/cmip6/cmip6-zarr-consolidated-stores.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The columns of the dataframe correspond to the <a class="reference external" href="https://docs.google.com/document/d/1yUx6jr9EdedCOLd--CPdTfGDwEwzPpCF6p1jRmqx-0Q/edit">CMI6 controlled vocabulary</a>.</p>
+<p>Here we filter the data to find monthly surface air temperature for historical experiments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_ta</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;activity_id==&#39;CMIP&#39; &amp; table_id == &#39;Amon&#39; &amp; variable_id == &#39;tas&#39; &amp; experiment_id == &#39;historical&#39;&quot;</span><span class="p">)</span>
+<span class="n">df_ta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we do further filtering to find just the models from NCAR.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_ta_ncar</span> <span class="o">=</span> <span class="n">df_ta</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;institution_id == &quot;NCAR&quot;&#39;</span><span class="p">)</span>
+<span class="n">df_ta_ncar</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="another-content-subsection">
-<h3>Another content subsection<a class="headerlink" href="#another-content-subsection" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Keep up the good work! A note, <em>try to avoid using code comments as narrative</em>, and instead let them only exist as brief clarifications where necessary.</p>
-</div>
-</div>
-<div class="section" id="your-second-content-section">
-<h2>Your second content section<a class="headerlink" href="#your-second-content-section" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Here we can move on to our second objective, and we can demonstrate</p>
-<div class="section" id="subsection-to-the-second-section">
-<h3>Subsection to the second section<a class="headerlink" href="#subsection-to-the-second-section" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<div class="section" id="a-quick-demonstration">
-<h4>a quick demonstration<a class="headerlink" href="#a-quick-demonstration" title="Permalink to this headline"><i class="fas fa-link"></i></a></h4>
-<div class="section" id="of-further-and-further">
-<h5>of further and further<a class="headerlink" href="#of-further-and-further" title="Permalink to this headline"><i class="fas fa-link"></i></a></h5>
-<div class="section" id="header-levels">
-<h6>header levels<a class="headerlink" href="#header-levels" title="Permalink to this headline"><i class="fas fa-link"></i></a></h6>
-<p>as well <span class="math notranslate nohighlight">\(m = a * t / h\)</span> text! Similarly, you have access to other <span class="math notranslate nohighlight">\(\LaTeX\)</span> equation <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html"><strong>functionality</strong></a> via MathJax (demo below from link),</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0e7bb819-e899-45db-a303-81dd94263652">
-<span class="eqno">(1)<a class="headerlink" href="#equation-0e7bb819-e899-45db-a303-81dd94263652" title="Permalink to this equation"><i class="fas fa-link"></i></a></span>\[\begin{align}
-\dot{x} &amp; = \sigma(y-x) \\
-\dot{y} &amp; = \rho x - y - xz \\
-\dot{z} &amp; = -\beta z + xy
-\end{align}\]</div>
-<p>Check out <a class="reference external" href="https://www.markdownguide.org/basic-syntax/"><strong>any number of helpful Markdown resources</strong></a> for further customizing your notebooks and the <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html"><strong>Jupyter docs</strong></a> for Jupyter-specific formatting information. Don’t hesitate to ask questions if you have problems getting it to look <em>just right</em>.</p>
+<div class="section" id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<p>Now we will load a single store using <code class="docutils literal notranslate"><span class="pre">fsspec</span></code>, <code class="docutils literal notranslate"><span class="pre">zarr</span></code>, and <code class="docutils literal notranslate"><span class="pre">xarray</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the path to a specific zarr store (the last one from the dataframe above)</span>
+<span class="n">zstore</span> <span class="o">=</span> <span class="n">df_ta_ncar</span><span class="o">.</span><span class="n">zstore</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">zstore</span><span class="p">)</span>
+
+<span class="c1"># create a mutable-mapping-style interface to the store</span>
+<span class="n">mapper</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="n">zstore</span><span class="p">)</span>
+
+<span class="c1"># open it using xarray and zarr</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ds</span>
+</pre></div>
 </div>
 </div>
 </div>
+<p>Plot a map from a specific date:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myfield</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">tas</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1950-01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="n">myfield</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="last-section">
-<h2>Last Section<a class="headerlink" href="#last-section" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>If you’re comfortable, and as we briefly used for our embedded logo up top, you can embed raw html into Jupyter Markdown cells (edit to see):</p>
-<div class="admonition alert alert-info">
-<p class="admonition-title">Info</p>
-<p>Your relevant information here!</p>
 </div>
-<p>Feel free to copy this around and edit or play around with yourself. Some other <code class="docutils literal notranslate"><span class="pre">admonitions</span></code> you can put in:</p>
-<div class="admonition alert alert-success">
-<p class="admonition-title">Success</p>
-<p>We got this done after all!</p>
+<p>The global mean of a lat-lon field needs to be weighted by the area of each grid cell, which is proportional to cosine of latitude:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">global_mean</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span><span class="s1">&#39;lon&#39;</span><span class="p">))</span>
+</pre></div>
 </div>
-<div class="admonition alert alert-warning">
-<p class="admonition-title">Warning</p>
-<p>Be careful!</p>
 </div>
-<div class="admonition alert alert-danger">
-<p class="admonition-title">Danger</p>
-<p>Scary stuff be here.</p>
 </div>
-<p>We also suggest checking out Jupyter Book’s <a class="reference external" href="https://jupyterbook.org/content/metadata.html#jupyter-cell-tags">brief demonstration</a> on adding cell tags to your cells in Jupyter Notebook, Lab, or manually. Using these cell tags can allow you to <a class="reference external" href="https://jupyterbook.org/interactive/hiding.html">customize</a> how your code content is displayed and even <a class="reference external" href="https://jupyterbook.org/content/execute.html#dealing-with-code-that-raises-errors">demonstrate errors</a> without altogether crashing our loyal army of machines!</p>
+<p>Applying this to a single time slice yields a single scalar temperature.</p>
+<p>Let’s express the result in degrees Celsius rather than Kelvin:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">global_mean</span><span class="p">(</span><span class="n">myfield</span><span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a timeseries of global-average surface air temperature.</p>
+<p>We can just pass all the temperature data through our <code class="docutils literal notranslate"><span class="pre">global_mean</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ta_timeseries</span> <span class="o">=</span> <span class="n">global_mean</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">tas</span><span class="p">)</span>
+<span class="n">ta_timeseries</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default the data are loaded lazily, as Dask arrays. Here we trigger computation explicitly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">time</span> ta_timeseries.load()
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s make a plot!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ta_timeseries</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;monthly&#39;</span><span class="p">)</span>
+<span class="n">ta_timeseries</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;12 month rolling mean&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Global Mean Surface Air Temperature&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Add one final <code class="docutils literal notranslate"><span class="pre">---</span></code> marking the end of your body of content, and then conclude with a brief single paragraph summarizing at a high level the key pieces that were learned and how they tied to your objectives. Look to reiterate what the most important takeaways were.</p>
-<div class="section" id="whats-next">
-<h3>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>Let Jupyter book tie this to the next (sequential) piece of content that people could move on to down below and in the sidebar. However, if this page uniquely enables your reader to tackle other nonsequential concepts throughout this book, or even external content, link to it here!</p>
-</div>
+<p>In this notebook, we opened a CESM2 dataset with <code class="docutils literal notranslate"><span class="pre">fsspec</span></code> and <code class="docutils literal notranslate"><span class="pre">zarr</span></code>. We calculated and plotted global average surface air temperature.</p>
 </div>
 <div class="section" id="resources-and-references">
 <h2>Resources and references<a class="headerlink" href="#resources-and-references" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Finally, be rigorous in your citations and references as necessary. Give credit where credit is due. Also, feel free to link to relevant external material, further reading, documentation, etc. Then you’re done! Give yourself a quick review, a high five, and send us a pull request. A few final notes:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">Kernel</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Cells...</span></code> to confirm that your notebook will cleanly run from start to finish</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">&gt;</span> <span class="pre">Restart</span> <span class="pre">Kernel</span> <span class="pre">and</span> <span class="pre">Clear</span> <span class="pre">All</span> <span class="pre">Outputs...</span></code> before committing your notebook, our machines will do the heavy lifting</p></li>
-<li><p>Take credit! Provide author contact information if you’d like; if so, consider adding information here at the bottom of your notebook</p></li>
-<li><p>Give credit! Attribute appropriate authorship for referenced code, information, images, etc.</p></li>
-<li><p>Only include what you’re legally allowed: <strong>no copyright infringement or plagiarism</strong></p></li>
+<li><p><a class="reference external" href="http://gallery.pangeo.io/repos/pangeo-gallery/cmip6/basic_search_and_load.html">Original notebook in the Pangeo Gallery</a> by Henri Drake and <a class="reference external" href="https://ocean-transport.github.io/">Ryan Abernathey</a></p></li>
+<li><p><a class="reference external" href="https://projectpythia.org/cmip6-cookbook/">The CMIP6 Cookbook</a> (Project Pythia)</p></li>
 </ul>
-<p>Thank you for your contribution!</p>
 </div>
 </div>
 
@@ -594,14 +552,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 
               </div>
               <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">(Replace_with_your_title) Cookbook</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             </div>
           </div>
