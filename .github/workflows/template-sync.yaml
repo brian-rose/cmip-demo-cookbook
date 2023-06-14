@@ -16,4 +16,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_repo_path: ProjectPythia/cookbook-template
+          is_dry_run: true
           git_remote_pull_params: --allow-unrelated-histories --strategy=ort
